@@ -1,10 +1,17 @@
+h2 Name
 input.name-input(type="text" placeholder="name")
 button.name-submit Submit
 p name: {{currentName}}
-br
+
+h2 Chat
 input.chat-input(type="text" placeholder="chat message")
 button.chat-submit Submit
 each comments
-  .comment
-    strong {{username}}:
-    | {{text}}
+  +comment
+
+h3 Current Topic: {{currentTopic}} 
+h1 Topics
+ul
+  li.topic main
+  each topics
+    li.topic {{name}}
