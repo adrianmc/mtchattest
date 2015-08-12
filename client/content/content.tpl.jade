@@ -1,0 +1,10 @@
+input.name-input(type="text" placeholder="name")
+button.name-submit Submit
+p name: {{currentName}}
+br
+input.chat-input(type="text" placeholder="chat message")
+button.chat-submit Submit
+each comments
+  .comment
+    strong {{username}}:
+    | {{text}}
