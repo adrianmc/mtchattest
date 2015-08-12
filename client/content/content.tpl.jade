@@ -12,6 +12,10 @@ each comments
 h3 Current Topic: {{currentTopic}} 
 h1 Topics
 ul
-  li.topic main
+  li
+    span.topic main
+    span ({{mainCount}})
   each topics
-    li.topic {{name}}
+    li
+      span.topic {{name}}
+      span ({{topicCount name}})

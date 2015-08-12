@@ -7,6 +7,9 @@ Template.content.helpers
   currentTopic: -> Session.get('currentTopic')
   comments: -> Comments.find topic: Session.get('currentTopic')
   topics: -> Topics.find()
+  topicCount: (topicName) ->
+    Comments.find(topic: topicName).count()
+  mainCount: -> Comments.find(topic: 'main').count()
 
 Template.content.events
   'click .name-submit': ->
